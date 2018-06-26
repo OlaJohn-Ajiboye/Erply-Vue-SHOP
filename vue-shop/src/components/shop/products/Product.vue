@@ -4,7 +4,7 @@
 
     <div class="card-block">
       <h5 class="card-title ">{{product.name}}</h5>
-      <p class="card-text font-weight-bold">{{product.price | formatMoney}} - Stock: {{product.inStock}}</p>
+      <p class="card-text font-weight-bold">{{product.price | formatMoney}} - Stock: {{product.inventory}}</p>
       <AddToCart :product="product" />
     </div>
   </div>

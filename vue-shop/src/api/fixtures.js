@@ -43,19 +43,26 @@ let products = [
 
 
 
-// Simulate requests
+// Call API
 
 export default {
-  getProfile (cb) {
-    setTimeout(() => cb(profile), 200)
-  },
   getProducts(cb) {
     axios.get(url).then(res => {
       products = res.data
+      // added the posibilty to enter inventory . This makes sure items can not be added to cart if it is out of stock.
+      // add to cart button is disabled when item is out os stock .And inventory for inStock  items is set to 100.
+      products.forEach(product=>{
+        if(product.inStock === false){
+          product.inventory = 0;
+        }else{
+          product.inventory = 100;
+        }
+      })
+      console.log(products); // check products state
       cb(products)
     }).catch(res => {
       console.log('error', res)
-    })
+    });
     //setTimeout(() => cb(products), 200)
   },
-}
+};
