@@ -4,7 +4,6 @@ import * as actions from './shop/actions'
 import * as getters from './shop/getters'
 import products from './shop/modules/products'
 import profile from './shop/modules/profile'
-import promotions from './shop/modules/promotions'
 import shoppingCart from './shop/modules/shopping-cart'
 
 Vue.use(Vuex)
@@ -17,7 +16,6 @@ export default new Vuex.Store({
   modules: {
     products,
     profile,
-    promotions,
     shoppingCart
   },
   strict: debug

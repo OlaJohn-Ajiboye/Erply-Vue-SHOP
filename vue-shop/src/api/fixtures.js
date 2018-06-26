@@ -46,6 +46,9 @@ let products = [
 // Simulate requests
 
 export default {
+  getProfile (cb) {
+    setTimeout(() => cb(profile), 200)
+  },
   getProducts(cb) {
     axios.get(url).then(res => {
       products = res.data

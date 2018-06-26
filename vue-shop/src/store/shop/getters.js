@@ -23,24 +23,5 @@ export const subtotal = state => {
     return subtotal + item.price * item.quantity
   }, 0)
 
-  return state.shoppingCart.productDiscount ? sum * 0.7 : sum
+  return sum
 }
-
-export const taxes = state => subtotal(state) * 0.005
-
-export const shipping = state => {
-  const shippings = cartProducts(state).map(item => item.shipping)
-
-  if (state.shoppingCart.freeShipping || !shippings.length) {
-    return 0
-  } else {
-    return Math.max(...shippings)
-  }
-}
-
-export const total = state => {
-  const discout = state.shoppingCart.totalDiscount ? -100 : 0
-  return subtotal(state) + taxes(state) + shipping(state) + discout
-}
-
-export const orderOnLimit = state => state.profile.data.limit <= total(state)

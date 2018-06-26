@@ -20,14 +20,12 @@
 
 <script>
 import PageHeader from './../shared/PageHeader'
-import Coupons from './Coupons'
 import ProductList from './products/ProductList'
 import ShoppingCart from './shopping-cart/ShoppingCart'
 export default {
   name: 'Shop',
   components: {
     PageHeader,
-    Coupons,
     ProductList,
     ShoppingCart
   }

@@ -1,8 +1,5 @@
 const state = {
-  added: [],
-  productDiscount: false,
-  totalDiscount: false,
-  freeShipping: false
+  added: []
 }
 
 const mutations = {
@@ -22,18 +19,6 @@ const mutations = {
   REMOVE_FROM_CART (state, item) {
     const index = state.added.findIndex(added => added.id === item.id)
     state.added.splice(index, 1)
-  },
-
-  TOGGLE_COUPON (state, coupon) {
-    const coupons = {
-      '1': 'productDiscount',
-      '2': 'totalDiscount',
-      '3': 'freeShipping'
-    }
-
-    if (coupons[coupon.id]) {
-      state[coupons[coupon.id]] = !state[coupons[coupon.id]]
-    }
   }
 }
 

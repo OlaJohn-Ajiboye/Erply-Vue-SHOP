@@ -1,36 +1,17 @@
 <template>
-  <nav class="navbar navbar-light bg-faded" v-if="profile.limit">
+  <nav class="navbar  navbar-light bg-faded  " >
     <div class="container">
-      <a class="navbar-brand" href="/">Shop</a>
+      <a class="navbar-brand font-weight-bold" href="/">Erply-Shop</a>
 
       <span class="navbar-text float-xs-right">
-        Hello <strong>{{fullName}}</strong>, your credit limit is
-         <ShoppingCartLimit :limit="profile.limit" />
+         <strong>Hello welcome</strong>
       </span>
     </div>
   </nav>
 </template>
 
 <script>
-import ShoppingCartLimit from './../shop/shopping-cart/ShoppingCartLimit'
-import { mapActions, mapState } from 'vuex'
-
 export default {
-  name: 'PageHeader',
-  computed: {
-    ...mapState({
-      profile: state => state.profile.data
-    }),
-    fullName () {
-      return `${this.profile.firstName} ${this.profile.lastName}`
-    }
-  },
-  methods: mapActions([
-    'getProfile'
-  ]),
-  components: { ShoppingCartLimit },
-  created () {
-    this.getProfile()
-  }
+  name: 'PageHeader'
 }
 </script>
