@@ -2,7 +2,7 @@
 
 A simple E-shop as part of E-rply Front-End Challenge using Vue.JS,Vue-Router and VueX
 
-- [See it live!](#)
+- [See it live!](https://erply-frontend-shop.firebaseapp.com/#/)
 
 This project is built with [vue-cli](https://github.com/vuejs/vue-cli) and [vuex](https://github.com/vuejs/vuex).
 
