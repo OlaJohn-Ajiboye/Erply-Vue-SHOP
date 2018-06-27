@@ -2,14 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import accounting from 'accounting'
-import pluralize from 'pluralize'
 import Shop from './components/shop/Shop'
 import store from './store'
 import router from './router'
 
 Vue.config.productionTip = false
 Vue.filter('formatMoney', accounting.formatMoney)
-Vue.filter('pluralize', pluralize)
 
 /* eslint-disable no-new */
 

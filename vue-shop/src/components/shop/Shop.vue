@@ -32,9 +32,11 @@ export default {
 }
 </script>
 <style scoped>
+/* style important for making sure the shopping cart remain stucky while scrolling product list . It looked terrible otherwise */
+/* Comment out this styling to see what I mean. */
 #shoppingcart {
     padding-top :0.05vh;
-     padding-right :5%;
+    padding-right :5%;
     position: fixed;
 }
 </style>
