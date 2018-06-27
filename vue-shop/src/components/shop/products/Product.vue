@@ -4,7 +4,7 @@
 
     <div class="card-block">
       <h5 class="card-title ">{{product.name}}</h5>
-      <p class="card-text font-weight-bold">{{product.price | formatMoney}} - Stock: {{product.inventory}}</p>
+      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-if="!product.instock" class='outofstock'> Out of Stock</span></p>
       <AddToCart :product="product" />
     </div>
   </div>
@@ -36,5 +36,10 @@ export default {
 .card{
     height: 350px;
     max-width: 100%;
+}
+.outofstock{
+  text-decoration: line-through;
+  color:red;
+  padding-left: 10px;
 }
 </style>
