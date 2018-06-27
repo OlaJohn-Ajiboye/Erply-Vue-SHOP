@@ -10,7 +10,7 @@
           <ProductList />
         </div>
         <div class="col-sm-3" >
-          <ShoppingCart id='cart'/>
+          <ShoppingCart id='shoppingcart'/>
         </div>
       </div>
     </div>
@@ -32,11 +32,9 @@ export default {
 }
 </script>
 <style scoped>
-#cart {
-    padding-top :5%;
+#shoppingcart {
+    padding-top :0.05vh;
      padding-right :5%;
     position: fixed;
-    top: 0;
-    bottom: 0;
 }
 </style>

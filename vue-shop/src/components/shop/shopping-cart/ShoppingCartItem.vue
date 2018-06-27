@@ -26,5 +26,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .cart-img {
+    height: 50px;
+    width: 50px;
+  }
 </style>
