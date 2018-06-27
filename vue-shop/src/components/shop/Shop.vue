@@ -9,8 +9,8 @@
         <div class="col-sm-9">
           <ProductList />
         </div>
-        <div class="col-sm-3" >
-          <ShoppingCart id='shoppingcart'/>
+        <div class="col-sm-3 fixed-top "  >
+          <ShoppingCart class='shoppingcart'/>
         </div>
       </div>
     </div>
@@ -34,9 +34,10 @@ export default {
 <style scoped>
 /* style important for making sure the shopping cart remain stucky while scrolling product list . It looked terrible otherwise */
 /* Comment out this styling to see what I mean. */
-#shoppingcart {
+.shoppingcart {
     padding-top :0.05vh;
     padding-right :5%;
     position: fixed;
+    overflow-y: auto
 }
 </style>
