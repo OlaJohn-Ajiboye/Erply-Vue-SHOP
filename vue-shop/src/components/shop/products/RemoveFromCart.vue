@@ -1,6 +1,7 @@
 <template>
-  <button type="button" @click="removeFromCart(product)"
-   <i class="fa fa-close"></i>
+  <button type="button" class="close"
+    @click="removeFromCart(product)">
+   &times;
   </button>
 </template>
 
@@ -18,8 +19,7 @@ export default {
 }
 </script>
 <style>
-.fa{
+.close{
   color:red;
-  font-size:20px
 }
 </style>
