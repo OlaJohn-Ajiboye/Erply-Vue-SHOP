@@ -4,7 +4,7 @@
 
     <div class="card-block">
       <h5 class="card-title ">{{product.name}}</h5>
-      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-if="!product.instock" class='outofstock'> Out of Stock</span></p>
+      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
       <AddToCart :product="product" />
     </div>
   </div>

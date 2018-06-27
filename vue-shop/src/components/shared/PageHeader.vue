@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar  navbar-light bg-faded  " >
+  <nav class="navbar  navbar-light bg-faded fixed-top " >
     <div class="container">
       <a class="navbar-brand font-weight-bold" href="/">Erply-Shop</a>
 
@@ -15,3 +15,8 @@ export default {
   name: 'PageHeader'
 }
 </script>
+<style scoped>
+.navbar {
+    background-color:rgb(173, 202, 202);
+}
+</style>

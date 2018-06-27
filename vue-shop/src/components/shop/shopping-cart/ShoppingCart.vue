@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Cart</h3>
+    <h3>Shopping Cart</h3>
 
     <ShoppingCartItem
       v-for="item in items"

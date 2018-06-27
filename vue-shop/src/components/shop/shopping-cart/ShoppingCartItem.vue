@@ -1,10 +1,10 @@
 <template>
   <div class="media mb-1">
     <div class="media-left">
-      <div class="media-object rounded vue-logo"></div>
+      <img class="card-img-top cart-img " :src="item.image">
     </div>
     <div class="media-body">
-      <strong class="d-block">{{item.title}}</strong>
+      <strong class="d-block">{{item.name}}</strong>
       <span>Quantity: {{item.quantity}} - {{item.price | formatMoney}}</span>
     </div>
     <div class="media-right align-middle">
@@ -26,10 +26,5 @@ export default {
 </script>
 
 <style scoped>
-  .vue-logo {
-    height: 50px;
-    width: 50px;
-    background: url('./../../../assets/logo.png') no-repeat center center #ddd;
-    background-size: 45%;
-  }
+
 </style>

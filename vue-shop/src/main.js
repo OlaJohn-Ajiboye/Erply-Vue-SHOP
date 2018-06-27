@@ -12,6 +12,7 @@ Vue.filter('formatMoney', accounting.formatMoney)
 Vue.filter('pluralize', pluralize)
 
 /* eslint-disable no-new */
+
 new Vue({
   el: '#shop',
   router,
