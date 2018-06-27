@@ -1,0 +1,19 @@
+{
+  "name": "erply-vue-shop",
+  "version": "1.0.0",
+  "description": "A simple E-shop as part of E-rply Front-End Challenge using Vue.JS,Vue-Router and VueX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlaJohn-Ajiboye/Erply-Vue-SHOP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlaJohn-Ajiboye/Erply-Vue-SHOP/issues"
+  },
+  "homepage": "https://github.com/OlaJohn-Ajiboye/Erply-Vue-SHOP#readme"
+}
