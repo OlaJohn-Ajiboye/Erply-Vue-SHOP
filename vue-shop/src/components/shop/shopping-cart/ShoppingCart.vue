@@ -27,7 +27,7 @@ export default {
   name: 'ShoppingCart',
   computed: mapGetters({
     items: 'cartProducts'
-  }),
+  }, ['shoppingcart']),
   components: {
     ShoppingCartItem,
     ShoppingCartSummary

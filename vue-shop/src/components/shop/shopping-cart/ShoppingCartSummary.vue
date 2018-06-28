@@ -1,7 +1,7 @@
 <template>
   <ul class="list-group">
-    <li class="list-group-item">
-    {{itemsQuantity}} {{'item' | pluralize(itemsQuantity) }}: {{subtotal | formatMoney}}
+    <li class="list-group-item cart">
+    {{itemsQuantity}} {{'items'}} added to Cart
     </li>
     <li class="list-group-item">
       <strong>Total:</strong>
@@ -20,11 +20,13 @@ export default {
       'itemsQuantity',
       'subtotal',
       'total'
-    ]),
-    totalWithDiscount () {
-      let total = this.$store.getters.total
-      return total > 0 ? this.total : 0
-    }
+    ])
   }
 }
 </script>
+<style scoped>
+.cart{
+  font-style: italic;
+  font-weight:600;
+}
+</style>

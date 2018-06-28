@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <div id="shop">
     <PageHeader />
-    <Toggle />
+     <div class="container">
+      <div class="row mt-2">
+        <div class="col-sm-9">
+          <router-view></router-view>
+          </div>
+        </div>
+      </div>
     <div class="container">
-      <Coupons />
-
       <div class="row mt-2">
         <div class="col-sm-9">
           <ProductList />
         </div>
-        <div class="col-sm-3 fixed-top "  >
+        <div class="col-sm-3 sticky-top  " >
           <ShoppingCart class='shoppingcart'/>
         </div>
       </div>
