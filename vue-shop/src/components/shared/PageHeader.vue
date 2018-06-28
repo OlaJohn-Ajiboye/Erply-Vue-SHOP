@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar  navbar-light bg-faded fixed-top " >
     <div class="container">
-      <a class="navbar-brand font-weight-bold" href="/">Erply-Shop</a>
-      <span class="navbar-text float-xs-right">
-         <strong class='hidden-md-up '><router-link :to="{ name: 'ShoppingCart'}" >{{itemsQuantity}}Cart</router-link></strong>
+      <a class="navbar-brand font-weight-bold navbar-static-top" href="/">Erply-Shop</a>
+      <span class="navbar-text float-xs-right cart">
+         <strong class="cart"><router-link class="cart" :to="{ name: 'ShoppingCart'}" >{{itemsQuantity}}<i class="fa fa-cart-plus cart"></i></router-link></strong>
       </span>
     </div>
   </nav>
@@ -21,7 +21,11 @@ export default {
 .navbar {
     background-color:rgb(173, 202, 202);
 }
-.fixed-top{
-
+.cart{
+color:green;
+font-size:20px
+}
+.fixed-top {
+  position: fixed
 }
 </style>
