@@ -3,7 +3,7 @@
     <img class="card-img-top " :src="product.image">
 
     <div class="card-block">
-      <h5 class="card-title ">{{product.name}}</h5>
+      <h5 class="card-title text-truncate">{{product.name}}</h5>
       <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
       <AddToCart :product="product" />
     </div>
