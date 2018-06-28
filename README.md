@@ -1,6 +1,6 @@
 ﻿# Erply-Vue-SHOP
 
-A simple E-shop as part of E-rply Front-End Challenge using Vue.JS
+A simple E-shop as part of E-rply Front-End Challenge using Vue.JS,Vuex and Vue-Router
 
 - [See it live!](https://erply-frontend-shop.firebaseapp.com/#/)
 
