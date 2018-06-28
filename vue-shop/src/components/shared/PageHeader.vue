@@ -25,7 +25,5 @@ export default {
 color:green;
 font-size:20px
 }
-.fixed-top {
-  position: fixed
-}
+
 </style>

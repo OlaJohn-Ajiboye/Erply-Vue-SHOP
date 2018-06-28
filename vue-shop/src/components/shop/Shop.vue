@@ -1,6 +1,7 @@
 <template>
   <div id="shop">
-    <PageHeader />
+    <div class="header"><PageHeader /></div>
+
      <div class="container">
       <div class="row mt-2">
         <div class="col-sm-9">
@@ -43,5 +44,8 @@ export default {
     padding-right :5%;
     position: fixed;
     overflow-y: auto
+}
+.header{
+  padding-bottom:5em;
 }
 </style>

@@ -1,12 +1,14 @@
 <template>
+<div class="pad">
   <div class="card text-xs-center">
     <img class="card-img-top img-responsive zoom" :src="product.image">
-    <div class="card-block">
+    <div class="card-body">
      <router-link :to="'/Product/' + product.id"><a><h5 class="card-title text-truncate">{{product.name}}</h5></a></router-link>
       <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
-      <AddToCart :product="product" />
+      <AddToCart :product="product" class="float-right"/>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -31,6 +33,9 @@ export default {
     width: 100%;
     overflow: hidden;
     transition: transform .2s;
+}
+.pad{
+  padding-bottom: 1em
 }
  .card img:hover{
     transform: scale(1.2);
