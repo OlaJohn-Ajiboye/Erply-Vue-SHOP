@@ -1,13 +1,13 @@
 <template>
   <div class="media mb-1">
     <div class="media-left">
-      <img class="card-img-top cart-img " :src="item.image">
+      <img class="card-img-top cart-img pad" :src="item.image">
     </div>
-    <div class="media-body">
-      <strong class="d-block">{{item.name}}</strong>
-      <span>Quantity: {{item.quantity}} - {{item.price | formatMoney}}</span>
+    <div class="media-body ">
+      <strong class="d-block pad">{{item.name}}</strong>
+      <span class="pad">Quantity: {{item.quantity}} - {{item.price | formatMoney}}</span>
     </div>
-    <div class="media-right align-middle">
+    <div class="media-right align-middle pad">
       <RemoveFromCart :product="item" />
     </div>
   </div>
@@ -29,5 +29,8 @@ export default {
   .cart-img {
     height: 50px;
     width: 50px;
+  }
+  .pad {
+    padding: 5px 5px;
   }
 </style>

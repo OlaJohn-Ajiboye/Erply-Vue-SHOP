@@ -19,3 +19,11 @@ export default {
   ])
 }
 </script>
+<style scoped>
+/* disabled icon on mousehover not working by default in bootsrap 4.1.0, this style handles that work around */
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+</style>
