@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h3 class="d-inline">Products</h3>
+    <h3 class="font-weight-bold text-center pad">Products</h3>
     <div class="row" v-for="row in productRows">
-      <div class="col-sm-4" v-for="product in row">
+      <div class="col-sm-3" v-for="product in row">
         <Product :product="product" track-by="id" />
       </div>
     </div>
@@ -19,7 +19,7 @@ export default {
     product: Object
   },
   computed: mapState({
-    productRows: state => chunk(state.products.all, 3)
+    productRows: state => chunk(state.products.all, 4)
   }),
   methods: mapActions([
     'getProducts'
@@ -30,11 +30,9 @@ export default {
   }
 }
 </script>
+
 <style scoped>
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
+.pad{
+  padding: 0.5em
 }
 </style>

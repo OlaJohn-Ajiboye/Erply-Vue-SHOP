@@ -1,25 +1,23 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Shop from '@/components/shop/Shop'
+import VueRouter from 'vue-router'
 import ShoppingCart from '@/components/shop/shopping-cart/ShoppingCart'
 import ProductDetails from '@/components/shop/products/ProductDetails'
+import ProductList from '@/components/shop/products/ProductList'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  scrollBehavior () {
-    return { x: 0, y: 0 }
-  },
+export default new VueRouter({
   routes: [
     {
       path: '/',
-      component: Shop,
-      name: 'Shop'
+      component: ProductList,
+      name: 'ProductList'
     },
     {
       path: '/product/:id',
       component: ProductDetails,
-      name: 'ProductDetails'
+      name: 'ProductDetails',
+      props: true
     },
     {
       path: '/shoppingcart',

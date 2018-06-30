@@ -25,3 +25,7 @@ export const subtotal = state => {
 
   return sum
 }
+
+export const products = state => {
+  return state.product
+}
