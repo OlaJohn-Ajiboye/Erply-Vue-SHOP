@@ -1,7 +1,6 @@
 <template>
   <div id="shop">
     <div class="header"><PageHeader /></div>
-
      <div class="container">
       <div class="row mt-2">
         <div class="col-sm-9">

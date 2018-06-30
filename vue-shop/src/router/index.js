@@ -7,7 +7,15 @@ import ProductDetails from '@/components/shop/products/ProductDetails'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
   routes: [
+    {
+      path: '/',
+      component: Shop,
+      name: 'Shop'
+    },
     {
       path: '/product/:id',
       component: ProductDetails,

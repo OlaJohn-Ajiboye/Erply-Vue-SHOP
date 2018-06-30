@@ -15,6 +15,9 @@ import { mapActions, mapState } from 'vuex'
 import chunk from 'chunk'
 export default {
   name: 'ProductList',
+  props: {
+    product: Object
+  },
   computed: mapState({
     productRows: state => chunk(state.products.all, 3)
   }),

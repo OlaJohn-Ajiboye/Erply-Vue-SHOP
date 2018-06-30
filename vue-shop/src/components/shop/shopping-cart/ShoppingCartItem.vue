@@ -1,7 +1,7 @@
 <template>
   <div class="media mb-1">
     <div class="media-left">
-      <img class="card-img-top cart-img pad" :src="item.image">
+      <img class=" cart-img pad" :src="item.image">
     </div>
     <div class="media-body ">
       <strong class="d-block pad">{{item.name}}</strong>

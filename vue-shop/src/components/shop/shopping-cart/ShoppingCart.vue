@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Shopping Cart</h3>
+    <h3 class="text-center ">Shopping Cart</h3>
 
     <ShoppingCartItem
       v-for="item in items"
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     buy () {
-      window.alert('You bought :)')
+      window.alert('Thanks for Shopping :)')
       window.location.reload()
     }
   }
