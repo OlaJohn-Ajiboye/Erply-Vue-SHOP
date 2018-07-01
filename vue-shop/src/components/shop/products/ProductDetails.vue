@@ -2,7 +2,7 @@
 <div class="container">
   <div class="col-md-12">
   what the fuck
-  {{item.name}}
+  <!-- {{item.name}} -->
       </div>
     </div>
 
@@ -15,41 +15,29 @@ import {
 } from 'vuex'
 
 export default {
-  components: {
+  name: 'ProductDetails',
+  props: {
+    product: Object
   },
-  data () {
-    return {
-      loaderColor: '#5cb85c',
-      loaderSize: '50px'
-    }
-  },
-  computed: {
-    ...mapGetters(['products']),
-    item () {
-      let id = this.$route.params.id
-      if (this.products.id >= id) {
-        let filterArr = this.products.filter((item) => {
-          return item.id === id
-        })
-        if (filterArr.length > 0) {
-          return filterArr[0]
-        }
+
+  computed:
+   mapGetters(['products']),
+  item () {
+    console.log(this.product)
+    let id = this.$route.params.id
+    if (this.products.length >= id) {
+      let filterArr = this.products.filter((item) => {
+        return item.id == id
+      })
+      if (filterArr.length > 0) {
+        return filterArr[0]
       }
-      return {}
     }
+    return {}
   },
-  methods: {
-    ...mapActions(['updateCart']),
-    addItem () {
-      const order = {
-        item: Object.assign({}, this.item),
-        quantity: 1,
-        isAdd: true
-      }
-      // console.log(order);
-      this.updateCart(order)
-    }
-  }
+  methods: mapActions([
+    'getProducts'
+  ])
 }
 </script>
 

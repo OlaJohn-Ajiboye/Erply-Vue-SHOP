@@ -27,5 +27,29 @@ export const subtotal = state => {
 }
 
 export const products = state => {
-  return state.product
+  return state.products.all
 }
+
+// $scope.products = response.data;
+
+//           $scope.filtered =$scope.products.filter(a => {
+//             return a.id == $scope.productId;
+//           });
+
+//           $scope.productDetails = $scope.filtered[0];
+//           console.log($scope.filtered[0]);
+//           $scope.products = response.data;
+
+//           item() {
+//             console.log(this.products)
+//             let id = this.$route.params.id;
+//             if (this.products.length >= id) {
+//               let filterArr = this.products.filter((item) => {
+//                 return item.id == id
+//               });
+//               if (filterArr.length > 0) {
+//                 return filterArr[0];
+//               }
+//             }
+//             return {};
+//           }

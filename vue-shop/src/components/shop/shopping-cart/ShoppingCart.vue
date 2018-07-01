@@ -14,9 +14,9 @@
         @click="buy">
         Checkout
       </button>
-    </div>
-    <div class="float-right ">
+        <div class="float-right ">
       <router-link :to="{ name: 'ProductList'}" ><button class="btn btn-info font-weight-bold"><i class="fa fa-reply-all"></i> Back to Shop</button></router-link></strong>
+    </div>
     </div>
   </div>
 </template>
