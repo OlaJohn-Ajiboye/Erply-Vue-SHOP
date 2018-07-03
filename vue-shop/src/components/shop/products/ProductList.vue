@@ -15,7 +15,6 @@
 <script>
 import Product from './Product'
 import { mapActions, mapState } from 'vuex'
-import GridLoader from 'vue-spinner/src/GridLoader.vue'
 import chunk from 'chunk'
 
 export default {
@@ -36,7 +35,7 @@ export default {
   methods: mapActions([
     'getProducts'
   ]),
-  components: { Product, GridLoader },
+  components: { Product },
   created () {
     this.getProducts()
   }
@@ -73,8 +72,9 @@ export default {
 
 .loader {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    font-size:25px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
