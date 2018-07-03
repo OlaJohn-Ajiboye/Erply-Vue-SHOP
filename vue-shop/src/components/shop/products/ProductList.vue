@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div  id="hideMe" class="loader">..Loading Shop</div> -->
+    <div  id="hideMe" class="loader">..Loading Shop</div>
       <div>
       <h3 class="font-weight-bold text-center pad">Products</h3>
        <div class="row" v-for="row in productRows">
@@ -78,7 +78,7 @@ export default {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url('https://ibb.co/dRVPuy') 50% 50% no-repeat #e0e0e0;
+    background: url('https://raw.githubusercontent.com/OlaJohn-Ajiboye/Erply-Vue-SHOP/master/vue-shop/src/assets/loader.gif') 50% 50% no-repeat #e0e0e0;
 }
 .pad{
   padding: 0.5em
