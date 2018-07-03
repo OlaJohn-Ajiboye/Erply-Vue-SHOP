@@ -2,7 +2,7 @@
 <div class="container">
   <div class="col-md-12">
   what the fuck
-  <!-- {{item.name}} -->
+  {{item.name}}
       </div>
     </div>
 
@@ -34,10 +34,7 @@ export default {
       }
     }
     return {}
-  },
-  methods: mapActions([
-    'getProducts'
-  ])
+  }
 }
 </script>
 

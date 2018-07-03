@@ -5,16 +5,16 @@
     <ShoppingCartItem
       v-for="item in items"
       :item="item"
-      :key="item.id" />
+      :key="item.id"/>
 
-    <ShoppingCartSummary />
+    <ShoppingCartSummary class="shopping-cart" />
 
-    <div class="mt-1 text-xs-center">
+    <div class="mt-1 text-xs-center pad">
       <button class="btn btn-success"
         @click="buy">
         Checkout
       </button>
-        <div class="float-right ">
+        <div class="float-right pad">
       <router-link :to="{ name: 'ProductList'}" ><button class="btn btn-info font-weight-bold"><i class="fa fa-reply-all"></i> Back to Shop</button></router-link></strong>
     </div>
     </div>
@@ -45,6 +45,9 @@ export default {
 </script>
 <style scoped>
 .pad{
-  padding-bottom: 10px
+  padding-bottom: 5em
+}
+.shopping-cart{
+  padding-bottom: 1em
 }
 </style>

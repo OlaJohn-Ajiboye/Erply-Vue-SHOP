@@ -1,10 +1,13 @@
 const state = {
+  isLoading: true,
   all: []
+
 }
 
 const mutations = {
-  RECEIVE_PRODUCTS (state, products) {
+  RECEIVE_PRODUCTS (state, products, isLoading) {
     state.all = products
+    state.isLoading = false
   },
 
   ADD_TO_CART (state, productId) {
@@ -20,8 +23,15 @@ const mutations = {
   }
 }
 
+const getters = {
+  isPLoading: (state) => {
+    return state.isLoading
+  }
+}
+
 export default {
   state,
-  mutations
+  mutations,
+  getters
 
 }
