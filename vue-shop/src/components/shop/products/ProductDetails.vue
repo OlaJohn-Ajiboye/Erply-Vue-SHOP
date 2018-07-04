@@ -1,40 +1,22 @@
 <template>
 <div class="container">
   <div class="col-md-12">
-  what the fuck
-  {{item.name}}
+   {{ product.name }} <br>
+   {{ product.price }}<br>
+   {{ product.department }}
       </div>
     </div>
 
 </template>
 
 <script>
-import {
-  mapActions,
-  mapGetters
-} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'ProductDetails',
-  props: {
-    product: Object
-  },
-
   computed:
-   mapGetters(['products']),
-  item () {
-    console.log(this.product)
-    let id = this.$route.params.id
-    if (this.products.length >= id) {
-      let filterArr = this.products.filter((item) => {
-        return item.id == id
-      })
-      if (filterArr.length > 0) {
-        return filterArr[0]
-      }
-    }
-    return {}
-  }
+  mapGetters(['product'])
+
 }
 </script>
 

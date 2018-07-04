@@ -3,7 +3,7 @@
   <div class="card text-xs-center">
     <img class="card-img-top img-responsive zoom" :src="product.image">
     <div class="card-body">
-     <router-link :to="'/Product/' + product.id"><a><h5 class="card-title text-truncate">{{product.name}}</h5></a></router-link>
+     <a @click="singleProduct(product)" href="javascript:void(0)"><h5 @click="gotoDetails" class="card-title text-truncate">{{product.name}}</h5></a>
       <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
       <AddToCart :product="product" class="float-right"/>
     </div>
@@ -22,7 +22,10 @@ export default {
   },
   components: { AddToCart },
   methods: {
-    ...mapActions(['addToCart'])
+    ...mapActions(['addToCart', 'singleProduct']),
+    gotoDetails () {
+      this.$router.push('/product/' + this.product.id)
+    }
   }
 }
 </script>

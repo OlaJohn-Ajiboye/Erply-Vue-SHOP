@@ -7,6 +7,7 @@ import ProductList from '@/components/shop/products/ProductList'
 Vue.use(VueRouter)
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',

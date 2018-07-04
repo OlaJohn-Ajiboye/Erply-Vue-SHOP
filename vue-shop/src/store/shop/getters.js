@@ -1,4 +1,3 @@
-
 export const cartProducts = state => {
   return state.shoppingCart.added.map(({ id, quantity }) => {
     const product =
@@ -29,4 +28,7 @@ export const subtotal = state => {
 
 export const products = state => {
   return state.products.all
+}
+export const product = state => {
+  return state.products.product
 }
