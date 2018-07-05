@@ -21,10 +21,16 @@ Also I suggest you to use [vue-devtools](https://github.com/vuejs/vue-devtools) 
 ## Build Setup
 
 ```
+- clone 
+# git clone https://github.com/OlaJohn-Ajiboye/Erply-Vue-SHOP.git (or download Zip && Exract)
+
+- cd (change directory) into vue-shop
 # cd vue-shop
 
+- install dependecies
 # npm install
 
+- start dev build on Localhost
 # npm start or npm run dev
 
 default port will be: http://localhost:8080/ or http://localhost:8081/
