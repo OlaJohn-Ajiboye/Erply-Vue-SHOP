@@ -26,7 +26,7 @@ Also I suggest you to use [vue-devtools](https://github.com/vuejs/vue-devtools) 
 # npm install
 
 # npm start
-
+default port will be: http://localhost:8080/ or http://localhost:8081/
 # run all tests
 npm test
 ```
