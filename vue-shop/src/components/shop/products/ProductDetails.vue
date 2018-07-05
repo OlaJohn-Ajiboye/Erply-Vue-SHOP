@@ -3,9 +3,10 @@
   <div class="card text-xs-center">
     <img class="card-img-top img-responsive zoom" :src="product.image">
     <div class="card-body">
-      <h5 class="card-title text-truncate">{{product.name}}</h5>
+      <h5 class="card-title">{{product.name}}</h5>
       <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
        <h5 class="card-title tex-justify ">{{product.description}}</h5>
+       <h5 class="card-title tex-justify ">Store: {{product.store}}</h5>
       <AddToCart :product="product" class="float-right"/>
     </div>
    </div>
@@ -36,11 +37,6 @@ export default {
   padding-bottom: 1em;
   padding-top: 5em
 }
-.card img:hover{
-  transform: scale(1.2);
-  z-index: 1060
-}
-
 .card h5{
   cursor:pointer;
 }
