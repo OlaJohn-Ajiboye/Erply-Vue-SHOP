@@ -54,7 +54,7 @@ export default {
       store: '',
       instock: '',
       params: {
-        per_page: 12, // products per page
+        per_page: 100, // products per page
         from: 1,
         to: 2,
         current_page: null
@@ -82,6 +82,7 @@ export default {
     },
     ...mapActions(['storeProducts']),
     filterStore (e) {
+      this.pagination = false
       // var self = this
       const userFilter = this.model.filter((mode) => {
         if (this.instock !== '') {
@@ -93,6 +94,7 @@ export default {
     },
 
     filterStock (e) {
+      this.pagination = false
       const userFilter = this.model.filter((mode) => {
         if (this.store !== '') {
           return mode.instock.toString() === e.target.value && mode.store === this.store
