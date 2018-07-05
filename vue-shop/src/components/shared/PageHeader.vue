@@ -36,12 +36,12 @@ color: black;
 font-size:18px
 }
 .cart-text{
- font-size:18px;
- font-weight: bold;
- color: black;
+font-size:18px;
+font-weight: bold;
+  color: black;
 }
 .header{
-  font-family: 'Shrikhand', cursive;
-  font-size:25px
+font-family: 'Shrikhand', cursive;
+font-size:25px
 }
 </style>

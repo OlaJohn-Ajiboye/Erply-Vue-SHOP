@@ -27,12 +27,12 @@ export default {
 </script>
 <style scoped>
 .shoppingcart {
-    padding-top :0.05vh;
-    padding-right :5%;
-    position: fixed;
-    overflow-y: auto
+  padding-top :0.05vh;
+  padding-right :5%;
+  position: fixed;
+  overflow-y: auto
 }
 .pads{
-   padding-bottom: 5em;
+  padding-bottom: 5em;
 }
 </style>

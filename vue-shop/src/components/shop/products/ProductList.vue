@@ -1,41 +1,43 @@
 <template>
+<div>
+  <div id="hideMe" class="loader pad">..Loading Shop</div>
   <div>
-   <div  id="hideMe" class="loader pad">..Loading Shop</div>
-   <div>
-      <h3 class="font-weight-bold text-center pad">Products</h3>
+    <h3 class="font-weight-bold text-center pad">Products</h3>
+    <div class="container">
       <div class="row">
-         <div class="col-md-12">
-            <div class="col-md-6">
-               <div class="col-md-3">
-                  <div class="form-group">
-                     <label for="">Availability</label>
-                     <select class="form-control" @input="filterStock" v-model="instock">
-                        <option value="false">Out of Stock</option>
-                        <option value="true">In Stock</option>
-                     </select>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="form-group">
-                     <label for="">Filter by Store</label>
-                     <select class="form-control" @input="filterStore" v-model="store">
-                        <option value="Finland">Finland</option>
-                        <option value="Estonia">Estonia</option>
-                     </select>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-sm-3" v-for="product in dataModel">
-            <Product :product="product" :key="product.id" track-by="id" />
+        <div class="col">
+          <div class="form-group">
+            <label class="font-weight-bold" for="">Filter by Stock</label>
+            <select class="form-control" @input="filterStock" v-model="instock">
+              <option value="false">Out of Stock</option>
+              <option value="true">In Stock</option>
+            </select>
           </div>
-               <div class="pagination-item ">
-                  <button class="btn btn-success btn-lg" :disabled="! showPrev || ! pagination" @click="renderList(params.current_page-1)">Prev</button>
-                  <button class="btn btn-success btn-lg" :disabled="! showNext || ! pagination" @click="renderList(params.current_page+1)">Next</button>
-               </div>
-            </div>
-         </div>
+        </div>
+        <div class="col">
+          <div class="form-group ">
+            <label class="font-weight-bold" for="">Filter by Store</label>
+            <select class="form-control" @input="filterStore" v-model="store">
+              <option value="Finland">Finland</option>
+              <option value="Estonia">Estonia</option>
+            </select>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3" v-for="product in dataModel">
+          <Product :product="product" :key="product.id" track-by="id" />
+        </div>
+        <div class="pagination-item ">
+          <button class="btn btn-success btn-lg" :disabled="! showPrev || ! pagination" @click="renderList(params.current_page-1)">Prev</button>
+          <button class="btn btn-success btn-lg" :disabled="! showNext || ! pagination" @click="renderList(params.current_page+1)">Next</button>
+        </div>
+      </div>
+   </div>
+</div>
+</div>
 </template>
 
 <script>
@@ -79,21 +81,25 @@ export default {
       }
     },
     ...mapActions(['storeProducts']),
-    filterStore () {
-      this.pagination = false
-      var self = this
-	   const userFilter = this.model.filter(function (mode) {
-      		return mode.store.toLowerCase().indexOf(self.store.toLowerCase()) >= 0
-    	})
-      	this.dataModel = userFilter
+    filterStore (e) {
+      // var self = this
+      const userFilter = this.model.filter((mode) => {
+        if (this.instock !== '') {
+          return mode.store === e.target.value && mode.instock.toString() === this.instock
+        }
+        return mode.store === e.target.value
+      })
+      this.dataModel = userFilter
     },
-    filterStock () {
-      this.pagination = false
-      var self = this
-		    const userFilter = this.model.filter(function (mode) {
-		       		return mode.instock.toLowerCase().indexOf(self.instock.toLowerCase()) >= 0
-		       	})
-   	this.dataModel = userFilter
+
+    filterStock (e) {
+      const userFilter = this.model.filter((mode) => {
+        if (this.store !== '') {
+          return mode.instock.toString() === e.target.value && mode.store === this.store
+        }
+        return mode.instock.toString() === e.target.value
+      })
+      this.dataModel = userFilter
     }
   },
   computed: {

@@ -15,7 +15,7 @@
         Checkout
       </button>
         <div class="float-right pad">
-      <router-link :to="{ name: 'ProductList'}" ><button class="btn btn-info font-weight-bold"><i class="fa fa-reply-all"></i> Back to Shop</button></router-link></strong>
+      <router-link :to="{ name: 'ProductList'}" ><button class="btn btn-info font-weight-bold"><i class="fa fa-reply-all"></i> Back to Shop</button></router-link>
     </div>
     </div>
   </div>

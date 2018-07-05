@@ -31,27 +31,26 @@ export default {
 </script>
 
 <style scoped>
- .card img{
-    height: 50%;
-    width: 100%;
-    overflow: hidden;
-    transition: transform .2s;
+.card img{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  transition: transform .2s;
 }
 .pad{
   padding-bottom: 1em
 }
- .card img:hover{
-    transform: scale(1.2);
-    z-index: 1060
+.card img:hover{
+  transform: scale(1.2);
+  z-index: 1060
 }
-
 .card h5{
-    cursor:pointer;
+  cursor:pointer;
 }
 
 .card{
-    height: 350px;
-    max-width: 100%;
+  height: 350px;
+  max-width: 100%;
 }
 .outofstock{
   text-decoration: line-through;

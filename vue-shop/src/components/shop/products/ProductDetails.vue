@@ -1,34 +1,57 @@
 <template>
-<div class="container">
-  <div class="col-md-12">
-   {{ product.name }} <br>
-   {{ product.price }}<br>
-   {{ product.department }}
-      </div>
+<div class="pad">
+  <div class="card text-xs-center">
+    <img class="card-img-top img-responsive zoom" :src="product.image">
+    <div class="card-body">
+      <h5 class="card-title text-truncate">{{product.name}}</h5>
+      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
+       <h5 class="card-title tex-justify ">{{product.description}}</h5>
+      <AddToCart :product="product" class="float-right"/>
     </div>
-
+   </div>
+  <div class="float-right pad">
+ <router-link :to="{ name: 'ProductList'}" ><button class="btn btn-info font-weight-bold"><i class="fa fa-reply-all"></i> Back to Shop</button></router-link>
+</div>
+</div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+import AddToCart from './AddToCart'
 
 export default {
   name: 'ProductDetails',
+  components: { AddToCart },
   computed:
-  mapGetters(['product'])
+  mapGetters(['product']),
+  methods: {
+    ...mapActions(['addToCart'])
+  }
 
 }
 </script>
 
 <style scoped>
-.caption-full {
-  padding-right: 10px;
-  padding-left: 10px;
+.pad{
+  padding-bottom: 1em;
+  padding-top: 5em
+}
+.card img:hover{
+  transform: scale(1.2);
+  z-index: 1060
 }
 
-.ratings {
-  padding-right: 10px;
+.card h5{
+  cursor:pointer;
+}
+
+.card{
+  height: 500px;
+  max-width: 100%;
+}
+.outofstock{
+  text-decoration: line-through;
+  color:red;
   padding-left: 10px;
-  color: #d17581;
 }
 </style>
