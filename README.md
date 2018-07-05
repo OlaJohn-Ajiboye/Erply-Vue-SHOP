@@ -17,7 +17,7 @@ Also I suggest you to use [vue-devtools](https://github.com/vuejs/vue-devtools) 
 - The is should be shown with currency
 - Users is  able to add/remove products to/from their cart
 ###  Cart page:
-- Shopping Cart page (adding products, removing products, totals and          checkout )
+- Shopping Cart page (adding products, removing products, totals and checkout )
 ## Build Setup
 
 ```
@@ -25,8 +25,10 @@ Also I suggest you to use [vue-devtools](https://github.com/vuejs/vue-devtools) 
 
 # npm install
 
-# npm start
+# npm start or npm run dev
+
 default port will be: http://localhost:8080/ or http://localhost:8081/
+
 # run all tests
 npm test
 ```
