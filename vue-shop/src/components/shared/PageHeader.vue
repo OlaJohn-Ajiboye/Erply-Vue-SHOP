@@ -29,6 +29,8 @@ background-color:#e0e0e0 ;
 -webkit-box-shadow: 10px 6px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 6px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 10px 6px 5px 0px rgba(0,0,0,0.75);
+line-height: 35px;
+height:55px ;
 
 }
 .cart{
