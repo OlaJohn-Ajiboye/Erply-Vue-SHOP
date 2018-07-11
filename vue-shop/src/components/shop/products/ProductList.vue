@@ -54,7 +54,7 @@ export default {
       store: '',
       instock: '',
       params: {
-        per_page: 100, // products per page
+        per_page: 60, // products per page
         from: 1,
         to: 2,
         current_page: null
@@ -130,13 +130,13 @@ export default {
 
 <style scoped>
 #hideMe {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    -moz-animation: cssAnimation 0s ease-in 3s forwards;
     /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
     /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
     /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
+    animation: cssAnimation 0s ease-in 3s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
