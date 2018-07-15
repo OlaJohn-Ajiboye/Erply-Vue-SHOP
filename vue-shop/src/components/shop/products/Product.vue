@@ -1,10 +1,10 @@
 <template>
 <div class="pad">
   <div class="card text-xs-center">
-    <img class="card-img-top img-responsive zoom" :src="product.image">
+    <v-lazy-image class="card-img-top img-responsive zoom" :src="product.image"/>
     <div class="card-body">
      <a @click="singleProduct(product)" href="javascript:void(0)"><h5 @click="gotoDetails" class="card-title text-truncate">{{product.name}}</h5></a>
-      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='outofstock'> Out of Stock</span></p>
+      <p class="card-text font-weight-bold"> {{product.price | formatMoney}} <span v-show="!product.instock" class='out-of-stock'> Out of Stock</span></p>
       <AddToCart :product="product" class="float-right"/>
     </div>
   </div>
@@ -14,13 +14,13 @@
 <script>
 import AddToCart from './AddToCart'
 import {mapActions} from 'vuex'
-
+import VLazyImage from 'v-lazy-image'
 export default {
   name: 'Product',
   props: {
     product: Object
   },
-  components: { AddToCart },
+  components: { AddToCart, VLazyImage },
   methods: {
     ...mapActions(['addToCart', 'singleProduct']),
     gotoDetails () {
@@ -52,7 +52,7 @@ export default {
   height: 350px;
   max-width: 100%;
 }
-.outofstock{
+.out-of-stock{
   text-decoration: line-through;
   color:red;
   padding-left: 10px;

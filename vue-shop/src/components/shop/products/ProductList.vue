@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label class="font-weight-bold" for="">Filter by Stock</label>
+            <label class="font-weight-bold" >Filter by Stock</label>
             <select class="form-control" @input="filterStock" v-model="instock">
               <option value="false">Out of Stock</option>
               <option value="true">In Stock</option>
@@ -16,7 +16,7 @@
         </div>
         <div class="col">
           <div class="form-group ">
-            <label class="font-weight-bold" for="">Filter by Store</label>
+            <label class="font-weight-bold" >Filter by Store</label>
             <select class="form-control" @input="filterStore" v-model="store">
               <option value="Finland">Finland</option>
               <option value="Estonia">Estonia</option>
@@ -27,7 +27,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-3" v-for="product in dataModel">
+        <div class="col-sm-3" v-for="product in dataModel" :key="product.id">
           <Product :product="product" :key="product.id" track-by="id" />
         </div>
         <div class="pagination-item ">
@@ -54,7 +54,7 @@ export default {
       store: '',
       instock: '',
       params: {
-        per_page: 60, // products per page
+        per_page: 100, // products per page
         from: 1,
         to: 2,
         current_page: null
@@ -130,13 +130,13 @@ export default {
 
 <style scoped>
 #hideMe {
-    -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    -moz-animation: cssAnimation 0s ease-in 1s forwards;
     /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 1s forwards;
     /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    -o-animation: cssAnimation 0s ease-in 1s forwards;
     /* Opera */
-    animation: cssAnimation 0s ease-in 3s forwards;
+    animation: cssAnimation 0s ease-in 1s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -156,14 +156,14 @@ export default {
 }
 
 .loader {
-    position: fixed;
-    font-size:25px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url('https://raw.githubusercontent.com/OlaJohn-Ajiboye/Erply-Vue-SHOP/master/vue-shop/src/assets/loader.gif') 50% 50% no-repeat #e0e0e0;
+  position: fixed;
+  font-size:25px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('https://raw.githubusercontent.com/OlaJohn-Ajiboye/Erply-Vue-SHOP/master/vue-shop/src/assets/loader.gif') 50% 50% no-repeat #e0e0e0;
 }
 .pad{
   padding: 0.5em
@@ -176,5 +176,13 @@ export default {
   padding-right: 2em;
   padding-left: 2em;
   text-align: center;
+}
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+
+.v-lazy-image-loaded {
+  filter: blur(0);
 }
 </style>
