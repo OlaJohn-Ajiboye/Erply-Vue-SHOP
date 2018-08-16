@@ -17,7 +17,7 @@ const mutations = {
   },
 
   REMOVE_FROM_CART (state, item) {
-    const index = state.added.findIndex(added => added.id === item.id)
+    const index = state.added.findIndex(function (added) { return added.id === item.id })
     state.added.splice(index, 1)
   }
 }

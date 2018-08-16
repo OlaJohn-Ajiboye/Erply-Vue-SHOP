@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="hideMe" class="loader pad">..Loading Shop</div>
+  <div v-if= "loading"  class="loader pad">..Loading Shop</div>
   <div>
     <h3 class="font-weight-bold text-center pad">Products</h3>
     <div class="container">
@@ -57,7 +57,8 @@ export default {
         per_page: 100, // products per page
         from: 1,
         to: 2,
-        current_page: null
+        current_page: null,
+        loading: true
       }
     }
   },
@@ -91,6 +92,7 @@ export default {
         return mode.store === e.target.value
       })
       this.dataModel = userFilter
+      this.loading = false
     },
 
     filterStock (e) {
@@ -129,32 +131,6 @@ export default {
 </script>
 
 <style scoped>
-#hideMe {
-    -moz-animation: cssAnimation 0s ease-in 1s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 1s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 1s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 1s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-@keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        overflow:hidden;
-    }
-}
-@-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
-}
-
 .loader {
   position: fixed;
   font-size:25px;

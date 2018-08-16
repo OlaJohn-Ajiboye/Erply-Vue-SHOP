@@ -18,8 +18,7 @@ export default {
   computed: {
     ...mapGetters([
       'itemsQuantity',
-      'subtotal',
-      'total'
+      'subtotal'
     ])
   }
 }

@@ -38,7 +38,7 @@ export default {
   methods: {
     buy () {
       window.alert('Thanks for Shopping :)')
-      window.location.reload()
+      window.location.assign('https://erply-frontend-shop.firebaseapp.com/')
     }
   }
 }

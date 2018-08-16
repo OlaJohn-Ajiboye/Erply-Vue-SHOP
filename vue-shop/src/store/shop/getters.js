@@ -26,9 +26,6 @@ export const subtotal = state => {
   return sum
 }
 
-export const products = state => {
-  return state.products.all
-}
 export const product = state => {
   return state.products.product
 }
